@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TusJuegos.com</title>
+    <link rel="stylesheet" href="css/loading.css">
+
+</head>
+<body>
+    <div class="contenedor-loading">
+        <div class="loader" id="loader"></div>
+        <h1>Loading...</h1>
+        <h3 id="load-counter"></h3>
+        <div class="barra-loading"></div>
+    </div>
+
+<script>
+
+
+    // cada 100ava parte de 5seg sumo 1 al counter
+    let c=0;
+
+    setInterval(() => {
+        let counter = document.getElementById('load-counter');
+        counter.innerHTML = c + "%";
+        if(c<100)
+            c++;
+    }, 40);
+      //q dure 5 seg
+      setTimeout(() => {
+        location.href="index.html";
+    }, 5000);
+
+   
+</script>
+</body>
+</html>
