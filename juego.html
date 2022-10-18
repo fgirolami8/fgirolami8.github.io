@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tus Juegos</title>
     <link rel="stylesheet" href="css/style-juego.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;500&display=swap"
@@ -21,32 +22,44 @@
     <header>
         <img class="logo" src="css/img/logo.png" alt="logo">
         <input class="cuadroBusqueda" type="text" placeholder="Buscar Juego">
-    
+
         <img src="css/img/burger.png" alt="burguerNav" class="burger">
-</header>
+    </header>
+
+    <nav class="hiddenClass">
+        <ul>
+            <li>Categorias</li>
+            <li>Lanzamientos</li>
+            <li>Mis juegos</li>
+            <li>Mi Perfil</li>
+            <li>Cerrar Sesion</li>
+        </ul>
+    </nav>
 
     <div class="breadkrumb">
-        <h3>Home <i class='bx bxs-send' ></i> Sugerencias <i class='bx bxs-send' ></i> 4 in a Row - classic</h3>
+        <h3>Home <i class='bx bxs-send'></i> Sugerencias <i class='bx bxs-send'></i> 4 in a Row - classic</h3>
     </div>
     <section class="container">
-       
+
         <div class="gaming">
             <img src="img/4inarow1.png" alt="">
         </div>
         <div class="game-details">
             <div class="game-details-container">
-
+                <h2>4 In a Row - classic</h2>
                 <div class="img-game">
-                    <h2>4 In a Row - classic</h2>
-                    <img src="img/Screenshot 2022-09-19 192039.png" alt="">
-                    <img src="css/img/4inarow2.png" alt="">
-                    <img src="css/img/4inarow4.png" alt="">
-                    <img src="css/img/4inarow3.png" alt="">
+                       
+                        <img src="img/Screenshot 2022-09-19 192039.png" alt="">
+                        <img src="css/img/4inarow2.png" alt="">
+                        <img src="css/img/4inarow4.png" alt="">
+                        <img src="css/img/4inarow3.png" alt="">
                 </div>
 
                 <div>
                     <h2>Guía</h2>
-                    <img src="https://picsum.photos/390/250"></img>
+                    <video controls height="250px" width="350px">
+                        <source src="/css/img/2022-10-17 10-29-27.mkv">
+                    </video>
                 </div>
 
 
@@ -64,11 +77,8 @@
 
                 </div>
                 <h2>¡Podes compartirlo con tus amigos!</h2>
-                <div class="btn-compartir">
-                    <img
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAYAAACMRWrdAAAAAXNSR0IArs4c6QAABDZJREFUaEPNWuFZ4zAMlTpJmeSOSQ4m4ZgEmOTKJDAJuk+Om9ixZT0lKXf5AaW1ZT09WXp2Ybrxw0QkN1yjsZ/f0F83fI6CxcQkToDKMfp6x3OU2ztcMKdCwBYAcSjDGXFzfgz+11TchLUzCWKsCVMyFHAhMNSnpB5hmQ4DKw1ZFSnq3Hq8iJyJ6MzMl1QFImW1SsXo5I7ne01kMA9E9FSY/8yv35j5d7uszVeYsb1s9OaLyE8i+uPYfp7AYSH858AyUx9dwDTBmHIxvXpl5sd+AGrA0zwsCDvJ6i8iIsqUMlYCsNbS1Hw8MV+8bYczNio/3iqDkIjINHsm5Tq4eeP6QU5Jw+i4jx1F4diOiDwQycs14cCUuDDzvTcWZ6zfzLr2hy2hmCEiWunKKuj5q59/MvOdVyF3AEN8sLdvKhpCT8SkJb77GMloMFYL5RsDMwtGwZSq9pAaH1TGJT4GsKP2WE1E7lcvqiowvruj7pMicR6TsSOh5V6lgHJZXwHWjpPyrky+OhHzX0tFdKr0tlQEURsyqRfrZyL65TD5yid+nMW34wPEWLKx/PCyYGpLVsWriZgZGAQhNWUk/UrHYMbywppKuj9+aNklondmfi0NzvtI6Dw4nw+dndaSM/PJ3UtWF4KALSK1k/dCn8T0pjqOiMx9lB1QQMrSFAwgnTxRM9pqw9Sa1EFyePszxWMshazQb1x1yFhPeZsKbu3AMjAIqIcErFbFVA+YMmUqAyeY/qaP+1t34EGeesA+dBOXIhVgrN5HsyvY3WBzD4AKz1WUK2DrAM5Hiliej5VBsG1USwcYNhkbnWyvixns3THz9a4iFpLwaLsmjlPxS0RlThKp+EFQQRmXL2HP6wmOjIIbdH1sDzvlF4+wyfUEOze94qEK4MM/4dolRfQCZmrKh6UnstVc5XFIg57kF56eiOcO2y4wne+co1LKZe2ox/xR34sB7DqPoS6AjScUIlgFsArh9yT3Vje0eZxeqY0Ok4AIzlfcG/chxNi62njCtDiCTGcsewuqGE77D7rizrFHOLsJsLnPyZeqlvV9/JoDZU+PJ0sK9wMR0pwAsDo+SLSS58XAzIa3/5Ckgy5yrssjBvMYGFbXZn//2bdUHeLg3mgwtg9Ag6plT9POu+OwAg6lJJCKAUIDQ3ek562vuPdn57FX3K2s7AjNsQbzyj1KHPiF38qcXJhPG76UaHrFxqoIoLsejYDDa2kNqox8cJlYHAANbzhBAFfcoe8CAAo2DEEOtIXZQUVsM6uzxzZ46E6xKQS/rHBS0AO2v9i1EMs1DXyNvlysNE0ZyfJj+xgAYPJ3XJDkS/R6fPoHlo1PCyyticQkvuJtrPb9qIB938LIHaMVOOzsEk7FTeADkwJDV8jB4hFLtO3uzOvsMdFsH7OPfY+kigXP6/0gYxa0PYEtgSB2hmMcA38Bnm+9S/i6cV0AAAAASUVORK5CYII=" />
-                    <p>Compartir</p>
-                </div>
+                <button class="btn-compartir"><img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAYAAACMRWrdAAAAAXNSR0IArs4c6QAABDZJREFUaEPNWuFZ4zAMlTpJmeSOSQ4m4ZgEmOTKJDAJuk+Om9ixZT0lKXf5AaW1ZT09WXp2Ybrxw0QkN1yjsZ/f0F83fI6CxcQkToDKMfp6x3OU2ztcMKdCwBYAcSjDGXFzfgz+11TchLUzCWKsCVMyFHAhMNSnpB5hmQ4DKw1ZFSnq3Hq8iJyJ6MzMl1QFImW1SsXo5I7ne01kMA9E9FSY/8yv35j5d7uszVeYsb1s9OaLyE8i+uPYfp7AYSH858AyUx9dwDTBmHIxvXpl5sd+AGrA0zwsCDvJ6i8iIsqUMlYCsNbS1Hw8MV+8bYczNio/3iqDkIjINHsm5Tq4eeP6QU5Jw+i4jx1F4diOiDwQycs14cCUuDDzvTcWZ6zfzLr2hy2hmCEiWunKKuj5q59/MvOdVyF3AEN8sLdvKhpCT8SkJb77GMloMFYL5RsDMwtGwZSq9pAaH1TGJT4GsKP2WE1E7lcvqiowvruj7pMicR6TsSOh5V6lgHJZXwHWjpPyrky+OhHzX0tFdKr0tlQEURsyqRfrZyL65TD5yid+nMW34wPEWLKx/PCyYGpLVsWriZgZGAQhNWUk/UrHYMbywppKuj9+aNklondmfi0NzvtI6Dw4nw+dndaSM/PJ3UtWF4KALSK1k/dCn8T0pjqOiMx9lB1QQMrSFAwgnTxRM9pqw9Sa1EFyePszxWMshazQb1x1yFhPeZsKbu3AMjAIqIcErFbFVA+YMmUqAyeY/qaP+1t34EGeesA+dBOXIhVgrN5HsyvY3WBzD4AKz1WUK2DrAM5Hiliej5VBsG1USwcYNhkbnWyvixns3THz9a4iFpLwaLsmjlPxS0RlThKp+EFQQRmXL2HP6wmOjIIbdH1sDzvlF4+wyfUEOze94qEK4MM/4dolRfQCZmrKh6UnstVc5XFIg57kF56eiOcO2y4wne+co1LKZe2ox/xR34sB7DqPoS6AjScUIlgFsArh9yT3Vje0eZxeqY0Ok4AIzlfcG/chxNi62njCtDiCTGcsewuqGE77D7rizrFHOLsJsLnPyZeqlvV9/JoDZU+PJ0sK9wMR0pwAsDo+SLSS58XAzIa3/5Ckgy5yrssjBvMYGFbXZn//2bdUHeLg3mgwtg9Ag6plT9POu+OwAg6lJJCKAUIDQ3ek562vuPdn57FX3K2s7AjNsQbzyj1KHPiF38qcXJhPG76UaHrFxqoIoLsejYDDa2kNqox8cJlYHAANbzhBAFfcoe8CAAo2DEEOtIXZQUVsM6uzxzZ46E6xKQS/rHBS0AO2v9i1EMs1DXyNvlysNE0ZyfJj+xgAYPJ3XJDkS/R6fPoHlo1PCyyticQkvuJtrPb9qIB938LIHaMVOOzsEk7FTeADkwJDV8jB4hFLtO3uzOvsMdFsH7OPfY+kigXP6/0gYxa0PYEtgSB2hmMcA38Bnm+9S/i6cV0AAAAASUVORK5CYII=" />Compartir</button>
             </div>
 
         </div>
@@ -109,59 +119,66 @@
         </div>
     </section>
 
-    <section class="comments-container">
-        <div class="comment-box">
-            <h1>Escribe tu comentario!</h1>
+    <section class="comments">
+        <div class="comments-container">
+            <div class="comment-box">
+                <h1>Escribe tu comentario!</h1>
+                <form action="#">
+                    <div class="user">
+                        <img src="img/Screenshot 2022-09-19 173236.png" alt="">
+                        <h3>myUser</h3>
+                    </div>
+                    <textarea name="comment" placeholder="El juego me pareció... "></textarea>
+                    <div class="publicar">
+                        <div class="puntuacion">
+                            <p class="comment-score">Puntuacion:</p>
+
+                            <span><i class='bx bxs-star' class="stars" onclick="calificar(this)"
+                                    id="1estella"></i></span>
+                            <span><i class='bx bxs-star' class="stars" onclick="calificar(this)"
+                                    id="2estella"></i></span>
+                            <span><i class='bx bxs-star' class="stars" onclick="calificar(this)"
+                                    id="3estella"></i></span>
+                            <span><i class='bx bxs-star' class="stars" onclick="calificar(this)"
+                                    id="4estella"></i></span>
+                            <span><i class='bx bxs-star' class="stars" onclick="calificar(this)"
+                                    id="5estella"></i></span>
+                        </div>
+
+
+                        <button type="submit" id="btn-publicar">Publicar <i class='bx bxs-send'></i></button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="comment" />
             <form action="#">
                 <div class="user">
-                    <img src="img/Screenshot 2022-09-19 173236.png" alt="">
-                    <h3>myUser</h3>
+                    <img src="/img/pngtree-gray-simple-gradient-background-image_557031.jpg" alt="">
+                    <h3>Usuario4998</h3>
                 </div>
-                <textarea name="comment" placeholder="El juego me pareció... "></textarea>
+                <textarea name="comment">No me gusto.</textarea>
                 <div class="publicar">
                     <div class="puntuacion">
                         <p class="comment-score">Puntuacion:</p>
 
-                        <span><i class='bx bxs-star' class="stars" onclick="calificar(this)" id="1estella"></i></span>
-                        <span><i class='bx bxs-star' class="stars" onclick="calificar(this)" id="2estella"></i></span>
-                        <span><i class='bx bxs-star' class="stars" onclick="calificar(this)" id="3estella"></i></span>
-                        <span><i class='bx bxs-star' class="stars" onclick="calificar(this)" id="4estella"></i></span>
-                        <span><i class='bx bxs-star' class="stars" onclick="calificar(this)" id="5estella"></i></span>
+                        <span><i class='bx bxs-star' style="color: yellow;"></i></span>
+                        <span><i class='bx bxs-star'></i></span>
+                        <span><i class='bx bxs-star'></i></span>
+                        <span><i class='bx bxs-star'></i></span>
+                        <span><i class='bx bxs-star'></i></span>
                     </div>
-
-
-                    <button type="submit" id="btn-publicar">Publicar <i class='bx bxs-send'></i></button>
                 </div>
             </form>
         </div>
-
-        <div class="comment"/>
-        <form action="#">
-            <div class="user">
-                <img src="/img/pngtree-gray-simple-gradient-background-image_557031.jpg" alt="">
-                <h3>Usuario4998</h3>
-            </div>
-            <textarea name="comment">No me gusto.</textarea>
-            <div class="publicar">
-                <div class="puntuacion">
-                    <p class="comment-score">Puntuacion:</p>
-
-                    <span><i class='bx bxs-star' style="color: yellow;"></i></span>
-                    <span><i class='bx bxs-star'></i></span>
-                    <span><i class='bx bxs-star'></i></span>
-                    <span><i class='bx bxs-star'></i></span>
-                    <span><i class='bx bxs-star'></i></span>
-                </div>
-            </div>
-        </form>
-        </div>
-        <div class="comment"/>
+        <div class="comment" />
         <form action="#">
             <div class="user">
                 <img src="img/Screenshot 2022-09-19 173236.png" alt="">
                 <h3>Franco Girolami</h3>
             </div>
-            <textarea name="comment">Habia jugado anteriormete este juego pero con familia en mi casa. Ahora que descubri que lo puedo jugar desde mi computadora, lo voy a hacer mas seguido....</textarea>
+            <textarea
+                name="comment">Habia jugado anteriormete este juego pero con familia en mi casa. Ahora que descubri que lo puedo jugar desde mi computadora, lo voy a hacer mas seguido....</textarea>
             <div class="publicar">
                 <div class="puntuacion">
                     <p class="comment-score">Puntuacion:</p>
@@ -175,7 +192,7 @@
             </div>
         </form>
         </div>
-        <div class="comment"/>
+        <div class="comment" />
         <form action="#">
             <div class="user">
                 <img src="/img/1623338152762.jpg" alt="">
@@ -186,8 +203,8 @@
                 <div class="puntuacion">
                     <p class="comment-score">Puntuacion:</p>
 
-                    <span><i class='bx bxs-star' style="color: yellow;" ></i></span>
-                    <span><i class='bx bxs-star' style="color: yellow;" ></i></span>
+                    <span><i class='bx bxs-star' style="color: yellow;"></i></span>
+                    <span><i class='bx bxs-star' style="color: yellow;"></i></span>
                     <span><i class='bx bxs-star' style="color: yellow;"></i></span>
                     <span><i class='bx bxs-star'></i></span>
                     <span><i class='bx bxs-star'></i></span>
@@ -195,7 +212,31 @@
             </div>
         </form>
         </div>
+        </div>
     </section>
+
+    <footer>
+        <h2>Siguenos en nuestras redes sociales!</h2>
+
+        <div class="footer-redes">
+            <img src="css/img/youtube.png" alt="youtube">
+            <img src="css/img/facebook.png" alt="facebook">
+            <img src="css/img/chrome.png" alt="google">
+        </div>
+        
+        <p>TusJuegos.com es una página con tus juegos online favoritos. ¡Olvídate del aburrimiento! La mayor selección de juegos gratis está aquí, para que lleves la diversión al siguiente nivel. Juega online y sin preocupaciones: puedes jugar a todos nuestros juegos sin descargar. </p>
+        
+        <ul>
+            <li>comunidad</li>
+            <li>Ranking</li>
+            <li>creadores</li>
+            <li>contactos</li>
+            <li>copyright</li>
+            <li>ayuda</li>
+        </ul>
+    </footer>
+
+    <script src="js/js.js"></script>
 </body>
 
 </html>
