@@ -25,30 +25,35 @@ let rgtBtn_Carrousel_ARR = document.querySelectorAll('.adelante');
 
 lftBtn_Carrousel_ARR.forEach(e => {
     e.addEventListener('click', function(event){
-        let carrousel = event.currentTarget.parentNode.querySelectorAll('.carrousel')[0];
+        let game = event.currentTarget;
+        let carrousel = game.parentNode.querySelectorAll('.carrousel')[0];
         console.log(carrousel);
-        let XYmove = 790;        
+        let XYmove = 790;//lanzamiento-carrousel
         if(carrousel.classList.contains("carrousel-home"))
-            XYmove = 300;
+            (window.getComputedStyle(game).getPropertyValue('height') == "300px") ? XYmove = 250 : XYmove = 130;//si es mob-first se mueve menos el carrousel
         if(carrousel.style.left=="")
             carrousel.style.left=0;
-        if(parseFloat(carrousel.style.left)>=0)
-            return;
         carrousel.style.left= parseFloat(carrousel.style.left) + XYmove +"px";
+        //si se pasa q vuelva a left 0 
+        if(parseFloat(carrousel.style.left)>=0){
+            carrousel.style.left= 0 + "px";
+        }
     });
 });
 
 rgtBtn_Carrousel_ARR.forEach(e => {
     e.addEventListener('click', function(event){
-        let carrousel = event.currentTarget.parentNode.querySelectorAll('.carrousel')[0];
+        let game = event.currentTarget;
+        let carrousel = game.parentNode.querySelectorAll('.carrousel')[0];
         console.log(carrousel);
         let XYmove = 790;        
         if(carrousel.classList.contains("carrousel-home"))//DISTINTO PARA CARROUSEL DE LANZAMIENTO Y HOME
-            XYmove = 250;
+        (window.getComputedStyle(game).getPropertyValue('height') == "300px") ? XYmove = 250 : XYmove = 130;
+           
         if(carrousel.style.left=="")
             carrousel.style.left=0;
 
-        if((parseFloat(carrousel.style.left)<=-750 && XYmove==250) || (parseFloat(carrousel.style.left)<=-2100 && XYmove==790))
+        if((parseFloat(carrousel.style.left)<=-750 && XYmove==250) || (parseFloat(carrousel.style.left)<=-520 && XYmove==130) || (parseFloat(carrousel.style.left)<=-2100 && XYmove==790))
             return;
         carrousel.style.left = parseFloat(carrousel.style.left) - XYmove + "px";
     });
