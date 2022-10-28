@@ -15,11 +15,6 @@ function showNav() {
 }
 //------------------------------------
 
-let lanzamientoHome = document.querySelectorAll(".home-lanzamiento")[0];
-let timerImgLanzamientoHome = setInterval(() => {
-    
-}, 1);
-
 
 //CARROUSEL--------------------------
 
@@ -48,12 +43,12 @@ rgtBtn_Carrousel_ARR.forEach(e => {
         let carrousel = event.currentTarget.parentNode.querySelectorAll('.carrousel')[0];
         console.log(carrousel);
         let XYmove = 790;        
-        if(carrousel.classList.contains("carrousel-home"))
-            XYmove = 300;
+        if(carrousel.classList.contains("carrousel-home"))//DISTINTO PARA CARROUSEL DE LANZAMIENTO Y HOME
+            XYmove = 250;
         if(carrousel.style.left=="")
             carrousel.style.left=0;
 
-        if((parseFloat(carrousel.style.left)<=-800 && XYMove==300) || (parseFloat(carrousel.style.left)<=-2100 && XYMove==790))
+        if((parseFloat(carrousel.style.left)<=-750 && XYmove==250) || (parseFloat(carrousel.style.left)<=-2100 && XYmove==790))
             return;
         carrousel.style.left = parseFloat(carrousel.style.left) - XYmove + "px";
     });
@@ -69,3 +64,8 @@ home_btn.addEventListener('click', function(e){
    
 })
 
+let btn_style_lanzamiento = document.querySelectorAll(".btn-style-lanzamiento")[0];
+btn_style_lanzamiento.addEventListener('click', function(e){
+    location.href="lanzamiento.html";
+   
+})
