@@ -46,14 +46,14 @@ rgtBtn_Carrousel_ARR.forEach(e => {
         let game = event.currentTarget;
         let carrousel = game.parentNode.querySelectorAll('.carrousel')[0];
         console.log(carrousel);
-        let XYmove = 790;        
+        let XYmove = 750;        
         if(carrousel.classList.contains("carrousel-home"))//DISTINTO PARA CARROUSEL DE LANZAMIENTO Y HOME
         (window.getComputedStyle(game).getPropertyValue('height') == "300px") ? XYmove = 250 : XYmove = 130;
            
         if(carrousel.style.left=="")
             carrousel.style.left=0;
 
-        if((parseFloat(carrousel.style.left)<=-750 && XYmove==250) || (parseFloat(carrousel.style.left)<=-520 && XYmove==130) || (parseFloat(carrousel.style.left)<=-2100 && XYmove==790))
+        if((parseFloat(carrousel.style.left)<=-750 && XYmove==250) || (parseFloat(carrousel.style.left)<=-520 && XYmove==130) || (parseFloat(carrousel.style.left)<=-1500 && XYmove==750))
             return;
         carrousel.style.left = parseFloat(carrousel.style.left) - XYmove + "px";
     });

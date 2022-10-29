@@ -81,7 +81,7 @@ body{
     background-color: #FF8BF9;
     position:absolute;
     left:-70vw;
-    animation: barra-carga 5s ease-in-out;
+    animation: barra-carga 5s ease-in-out forwards;
 }
 @keyframes barra-carga{
     100%{
