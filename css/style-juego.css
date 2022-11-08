@@ -7,7 +7,7 @@
 
 body {
     background-color: var(--primary-color);
-    height:420vh;
+    /* height:420vh; */
 }
 
 * {
@@ -21,36 +21,33 @@ body {
 
 
 .gaming {
-    width: 85%;
-    height: 447px;
-    margin: 20px 62px 0px 62px;
+    background-color: white;
+    /* margin: 20px 62px 0px 62px; */
+    border:solid 3px rgb(253, 253, 253);
+    box-sizing: border-box;
+    width:706px;
 }
 
-.gaming img {
-    width: 100%;
-    height: 447px;
-    border-radius: 20px;
-    filter: drop-shadow(0px 4px 40px rgba(255, 255, 255, 0.15));
-}
 
 section .game-details {
     background-color: var(--sections-color);
-    height: 1132px;
-    width: 65vh;
+    /* width: 65vh; */
     position: relative;
     border-radius: 20px;
     filter: drop-shadow(0px 4px 40px rgba(255, 255, 255, 0.15));
-    margin: 20px 62px 65px 0px;
+    /* margin: 20px 62px 65px 0px; */
 
 }
 
-
+.icons{
+    margin: 40px auto;
+}
 .game-details .game-details-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
-    margin: 0px 20px;
+    /* margin: 0px auto; */
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: Bold;
     font-size: 24px;
@@ -72,7 +69,7 @@ section .game-details {
 }
 
 .game-details div {
-    margin: 20px;
+    /* margin: 20px; */
 }
 
 .game-details h2 {
@@ -116,12 +113,11 @@ section .game-details {
 .instructions {
     display: flex;
     background-color: var(--sections-color);
-    width: 85%;
-    height: 623px;
+    width: 706px;
     font-family: Inter;
 
     filter: drop-shadow(0px 4px 40px rgba(255, 255, 255, 0.15));
-    margin: 65px 62px;
+    /* margin: 65px 62px; */
     border-radius: 20px;
 }
 
@@ -164,23 +160,34 @@ section .game-details {
     display: grid;
     grid-template-areas: "game game-details"
         "instructions game-details";
+    gap:50px;
+    margin:30px;
 }
 
 .gaming {
     grid-area: game;
 }
+/* .gaming, instructions{
+    margin-left:50px;
+}
+.game-details{
+    margin-right:50px;
+
+} */
 
 .game-details {
     grid-area: game-details;
+    /* margin-bottom: 50px; */
 }
 
 .instructions {
+    /* margin-bottom: 50px; */
     grid-area: instructions;
 }
 
 
 .comments {
-
+    margin-bottom: 50px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -286,7 +293,7 @@ section .game-details {
     margin-bottom: 30px;
     color: #fff;
     transition: 0.3s ease;
-}
+} 
 
 #btn-publicar:hover {
     background-color: var(--primary-color);
@@ -329,8 +336,8 @@ section .game-details {
 
 .breadkrumb {
     padding-left: 5%;
-    padding-top: 5px;
-    margin-top: 90px;
+    padding-top: 20px;
+    margin-top: 80px;
 }
 
 .breadkrumb h3 {
@@ -357,7 +364,6 @@ section .game-details {
     border-radius: 5px;
     background: linear-gradient(to bottom, #aa71a7, #FF8BF9, #aa71a7);
 }
-
 
 
 
@@ -466,8 +472,6 @@ footer{
     width: 100%;
     height: 500px;
     background-color: #3c0f3a;
-    position:absolute;
-    bottom:0px;
     display:flex;
     flex-flow: column wrap;
     justify-content: space-around;

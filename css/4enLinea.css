@@ -1,0 +1,47 @@
+ .opciones-4enLinea, .fichasContainer{
+    display: flex;
+}
+.fichas img{
+    width:50px;
+    height:50px;
+}
+
+.fichas img:hover{
+    cursor:pointer;
+}
+
+.opciones-4enLinea{
+    width: 700px;
+    flex-direction: column;
+    background-color: rgb(40, 23, 125);
+    font-size: larger;
+    font-weight: bold;
+    align-items: center;
+    gap:10px;
+    padding: 10px 0;
+}
+
+.opciones-4enLinea select{
+    width: 100px;
+    text-align: center;
+    color:black;
+}
+
+#start{
+    background-color: aqua;
+    font-size: large;
+    width: 200px;
+    color:black;
+    padding:3px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+#start:hover{
+    background-color: rgb(184, 255, 255);
+    cursor:pointer;
+
+}
+
+.fichasContainer{
+    gap:100px;
+} 

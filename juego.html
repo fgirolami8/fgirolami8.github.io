@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <link rel="stylesheet" href="css/4enLinea.css">
 </head>
 
 <body>
@@ -41,9 +41,56 @@
     </div>
     <section class="container">
 
-        <div class="gaming">
-            <img src="css/img/4inarow.png" alt="">
-        </div>
+        <!-- JUEGO -->
+        <section class="gaming">
+            <canvas id="canvas"  width="700" height="500">your browser does not support html canvas tag</canvas>
+            <img src="img/fondo 4linea.jpg" alt="" id="img" srcset="" style="display:none">
+            
+            
+            <div class="opciones-4enLinea">
+    
+                <span id="timer">2:00</span>
+    
+                <button id="start" red>Empezar</button> 
+    
+                <div>
+                    Largo de linea ganadora: 
+                    <select name="largoLinea" id="largoLinea" >
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </div>
+    
+                <div class="fichasContainer">
+                    <div>
+    
+                        Ficha del jugador 1
+                        <div class="fichas" id="fichas1">
+                            <img src="img/ficha-de-poker.png" alt="">
+                            <img src="img/ficha-de-poker2.png" alt="">
+                        <img src="img/ficha-de-casino.png" alt="">
+                    </div>
+                </div>
+                <div>
+    
+                    Ficha del jugador 2
+                    <div class="fichas" id="fichas2">
+                        <img src="img/casino.png" alt="">
+                        <img src="img/poker.png" alt="">
+                        <img src="img/hearth.png" alt="">
+                    </div>
+                </div>
+                </div>
+    
+            </div>
+        </section>
+        <!-- si no le pongo una img aca con src del fondo no se lo puedo meter al fondo del canvas -->
+        
+        
+
+
         <div class="game-details">
             <div class="game-details-container">
                 <h2>4 In a Row - classic</h2>
@@ -87,33 +134,12 @@
                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAYAAACMRWrdAAAAAXNSR0IArs4c6QAABOxJREFUaEPVWtt12zAMBb1I5SxS5yvqFLU3sNMBmiyQeIM4U1T5irpIrEnEHlKURYoAAdJKe6qvHIcicYGLJ6Xgv34UAGgUgfkP89Avc2/+y/8LgEnE88GHikiqpVBn9jXm3QBY7jnSA3Cy8ArLlcffcSGLxUJW9b5yv1YAq2oFUPUAHUDfmd+75tiS0HIRIesXBWbArGC11aC/AsBmLrix3Hig+7sD0J2C1e+P5ulhvp7CJ8HtAZMsx3Vc1fuNAvUCANZKCIAE7y6rOwXQ9qBfk9ZM7BR4ejkcAGMhB8izjg+L9yNiRadBPXbN06l0hzIqKoCbu/2LBrUtPRh/L1SKAvWIUVRyZhwVGRPiVpIcVZguFbTnX8+3uSdkWcz50rvokGs4Po/bGjoN+rZrjjaiSh4ijylQoINihQOFe1b4K+V9vFfaFQbcjg0sTqEii61tTlJnVlNuU15QdidqAW650jxW1Yd3pWBzMWEezToF6hWg/6JBmeg5Jm4GHa4eBfr00Rx348upXJc8YF0fjE9FyTaVfKdDQyGWCjx+tCwCNvoVTy10RXtu4mjmwJG05s+yamP9LeljnLVSAWNOGd/C3L7j2hRILseRwKr6fqtAmzKJeNyxlgtyi5nN1vXBWCz0NbnfstYyZ5DA0MPzghkaweT0jg6zQSisRGhtqKBw9BrtdX1g2iiRN7Qu99jEOi+WpXpK0ZraA7VYVf/YKugTNJTExMuasVoQhvlgb5Z2WVExdG6JZUyVYqqVxZ4Z7SQOGK5BZUFp+PlVhdUKRTsJNF+tUaMZ5BkKTMr+Omw0cRuiLGBpl642wmiBATPdcFDBS8joA7DrqagUI0Wi3Riw6ZlhOrIhbsHnr0myXMBzTFy0y6UfQcXh5wAYs3MEjE7Ws0kIXxJdG4ai4HFT3z9o0D+LNparOO1PRBvC0c8fd3uuMOwWN5Q04ZagYg/wmNMZSxUeWSzdKUug5A3fTKUel0qxN847eps0SROiwcOO1PhuGYu9cipiiheH++hlgrrBujGPSWzjx0dbeVwH7JKgl6BnlMfM7ut6/w5DGz978uDK/AEd+Ez0FCuLK6kUQHWXWwTTEJKq4IUO6cmvvwhCVPeZfiYzzbBKLNzUyCqtT0l6SnxslFHavudgSq7lAQui53QCarGhArE3KLKprxDdQh5qrp5257djS4f7YDQQq4y0Gq/dDMoJtRKFMbVL3caQFvssqw3y+YOgUmB2lk/eig7AEv1VeF20EJnKsFze0qB23dvTSUhF/DR0elvUaMqUIlgVD2JzoqK/1oEzgUQ0kBEIF2sxEg5P3OfmeY2bgEvQBE2qb/tK6Ywa0u0jBul6udRQyN2R0V8beLIHwYMLdqHlUI0KvUcMd9xvCPFRsIitNBb8yaiISflXaBke3J6b423UozBWyAbm0sD4PUfYafuHceb3hMc7OEPKVfnluj0/Qwhfme6m00yMNxJySda4/cW92SR6QfDgcLsB0HfJBWHKCc3VUA/9qXs7dqkcJXHkIipSG5vICXq1UaBRkIjFzFzfFLfoJ0cSAFGB4SiYrjzEO8cL5x+JmRXDh2K9CdfdNQMcifvE3XxhAKB0wNH4Ct0lX01TMVJNvpj5bwihuo0nEf0fZiN2f8tPE8h3CoYdfsSbxm/xxzVYfbbEYInv93O1JEi+6akwwB/+UU5ajOOvUwAAAABJRU5ErkJggg==" />
                 <div>
                     <h3>¿Cómo jugar?</h3>
-                    <h4>¡Deja caer los discos en las ranuras, y une 4 para anotar!
-                        Este juego clásico de dos jugadores te permite competir contra un amigo o el computador.
-                        Tu objetivo es formar una línea de cuatro piezas que hagan juego. ¡Juega como el equipo rojo
-                        o el amarillo!
+                    <h4>¡Arrastra fichas en las ranuras, y forma una linea (de 4, 5, 6 o 7 casillas seguidas) de forma vertical horizontal o diagonal para ganar!
+                        Elije el largo de la fila necesario para ganar.
+                        Selecciona la ficha que prefieras y da en "Empezar" para comenzar el juego.
+                        Un circulo blanco se posara en la seccion del jugador que le corresponda el turno.
                     </h4>
-                </div>
-                <div>
-                    <h3>Descripción</h3>
-                    <h4>Four in a Row Classic es un famoso juego de mesa para dos jugadores.
-                        El objetivo es crear una fila de cuatro fichas idénticas.
-                        El primer jugador que consiga cuatro en fila gana la partida.
-                        Los jugadores pueden crear filas horizontales, verticales y diagonales.
-                        Los jugadores pueden desafiar a uno de sus amigos o jugar contra el ordenador.
-                    </h4>
-                </div>
-
-
-                <div class="credits">
-                    <div>
-                        <h3>Desarrollador del Juego</h3>
-                        <h4>ThePlayGame</h4>
-                    </div>
-                    <div>
-                        <h3>Fecha de Salida</h3>
-                        <h4>9 de Enero de 2019</h4>
-                    </div>
-                </div>
+                </div>            
             </div>
         </div>
     </section>
@@ -170,7 +196,7 @@
                 </div>
             </form>
         </div>
-        <div class="comment" />
+        <div class="comment">
         <form action="#">
             <div class="user">
                 <img src="img/Screenshot 2022-09-19 173236.png" alt="">
@@ -191,7 +217,7 @@
             </div>
         </form>
         </div>
-        <div class="comment" />
+        <div class="comment" >
         <form action="#">
             <div class="user">
                 <img src="/img/1623338152762.jpg" alt="">
@@ -236,6 +262,11 @@
     </footer>
 
     <script src="js/js.js"></script>
+    <script src="4 En Linea JS/main.js"></script>
+    <script src="4 En Linea JS/Ficha.js"></script>
+    <script src="4 En Linea JS/Tablero.js"></script>
+    <script src="4 En Linea JS/Casilla.js"></script>
+    <script src="4 En Linea JS/Jugador.js"></script>
 </body>
 
 </html>
