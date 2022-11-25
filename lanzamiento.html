@@ -11,9 +11,16 @@
  
     <header>
         <img class="logo" src="css/img/logo.png" alt="logo">
-        <input class="cuadroBusqueda" type="text" placeholder="Buscar Juego ">
+        <input class="cuadroBusqueda" type="text" placeholder="Buscar Juego">
     
-        <img src="css/img/burger.png" alt="burguerNav" class="burger">
+        <!-- burger -->
+        <svg class="burger" width="40" height="32" viewBox="0 0 40 32" version="1.1" xmlns="http://www.w3.org/2000/svg" arialabelledby="title">
+            <g class="lineas">
+              <rect class="top" x="0" y="0" width="40" height="6" fill="currentColor" />
+              <rect class="middle" x="0" y="13" width="40" height="6" fill="currentColor" />
+              <rect class="bottom" x="0" y="26" width="40" height="6" fill="currentColor" />
+            </g>
+          </svg>
 </header>
 
     <nav class="hiddenClass">
@@ -33,9 +40,16 @@
 
         <section class="hero-image">
             
-            <img class="blur-hero" src="css/img/fondo-heroSection.webp" alt="">
+            <!-- <img class="blur-hero" src="css/img/capa1.webp" alt="">
             <img class="img-superpuesta logo-game" src="css/img/logo-hero.png" alt="">
-            <img class="img-superpuesta" src="css/img/hero-image-capa-jimmy.webp" alt="">
+            <img class="img-superpuesta" src="css/img/hero-image-capa-jimmy.webp" alt=""> -->
+            <div class="heroH1"></div>
+            <div class="capa2">
+            </div>
+            <div class="capa3">
+                <div class="sprite"></div>
+            </div>
+
         </section>
 
 
@@ -43,28 +57,28 @@
         
         <section class="hero-caracteristicas">
             <h1>Caracteristicas</h1>
-            <article class="feature-card">
+            <article class="feature-card left ocultar-cards">
                 <div class="desc">
                     <p>Recorre tu escuela y ciudad en un juego a mundo abierto</p>
                 </div>
                     <img src="css/img/caract4.jpg" alt="">
             </article>
 
-            <article class="feature-card">
+            <article class="feature-card left ocultar-cards">
                 <div class="desc">
                     <p>Mantente alejado de las autoridades</p>
                 </div>
                 <img src="css/img/caract2.jpg" alt="">
             </article>
 
-            <article class="feature-card">
+            <article class="feature-card right ocultar-cards">
                 <div class="desc">
                     <p>Aprueba las materias para obtener logros</p>
                 </div>
                 <img src="css/img/caract3.jpg" alt="">
             </article>
 
-            <article class="feature-card">
+            <article class="feature-card right ocultar-cards">
                 <div class="desc">
                     <p>Prueba los diferentes vehiculos</p>
                 </div>
@@ -155,5 +169,6 @@
     </footer>
 
     <script src="js/js.js"></script>
+    <script src="js/lanzamiento.js"></script>
 </body>
 </html>

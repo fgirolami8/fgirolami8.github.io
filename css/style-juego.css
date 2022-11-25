@@ -5,6 +5,114 @@
     --home-border: #aa71a7;
 }
 
+
+/* HEADER */
+
+
+header{
+    z-index: 15;
+    background-color: rgba(60, 15, 58, 1);
+    display:none;
+    --header-height:100px;
+    height: var(--header-height);
+    width:100vw;
+    position: fixed;
+    top:0;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    border-bottom:var(--home-border) solid 3px;
+    box-sizing: border-box;
+    transition: height 0.5s;
+}
+
+.cuadroBusqueda{
+    height:50%;
+    width: 50%;
+    background-color: #aa71a7;
+    padding-left: 20px;
+    border-radius: 10px;
+    border-style: none;
+    font-size: 20px;
+    outline: none;
+}
+
+.cuadroBusqueda::placeholder{
+    color:rgba(255, 255, 255, 0.671);
+}
+.logo{
+    height:85%;
+    transition:0.4s;
+}
+.logo:hover{
+    cursor:pointer;
+    transform:scale(0.9);
+}
+
+
+
+
+
+/* BURGER */
+.burger{
+    margin-right:25px;
+    margin-left:4%;
+}
+.burger rect{
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.top.flip{
+    transform: rotate(45DEG) translate(4px,-3px);
+}
+.bottom.flip{
+    transform: rotate(-45DEG) translate(-20px, -6px);
+}
+.middle.flip{
+    opacity:0;
+}
+.burger:hover{
+    cursor: pointer;
+    border-radius: 10%;
+    /* background-color:#aa71a7; */
+}
+nav{
+    z-index: 15;
+    position: fixed;
+    top: 110px;
+    right:10px;
+    background-color: rgba(60, 15, 58, 1);
+    border:solid 3px #aa71a7;
+    text-align: center;
+    
+    transition: transform 0.4s ease-in-out;
+}
+nav li{
+    padding: 40px 80px;
+}
+
+nav li:hover{
+    background-color: #aa71a7;
+    cursor: pointer;
+}
+nav li:active{
+    background-color: #FF8BF9;
+}
+
+.hiddenClass{
+    transform: translate(150%);
+}
+/* cuando nav esta oculto los items no se ven y luego se cargan de a uno */
+
+nav li{
+    transition: opacity 1s;
+    opacity:0;
+}
+
+
+
+
+
+
 body {
     background-color: var(--primary-color);
     /* height:420vh; */
@@ -365,103 +473,6 @@ section .game-details {
     background: linear-gradient(to bottom, #aa71a7, #FF8BF9, #aa71a7);
 }
 
-
-
-
-header {
-    z-index: 15;
-    background-color: rgba(60, 15, 58, 1);
-    width: 100vw;
-    height: 80px;
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: var(--home-border) solid 3px;
-    box-sizing: border-box;
-}
-
-.cuadroBusqueda {
-    height: 40px;
-    width: 50%;
-    background-color: #aa71a7;
-    padding-left: 20px;
-    border-radius: 30px;
-    border-style: none;
-    font-size: 20px;
-    outline: none;
-}
-
-.cuadroBusqueda::placeholder {
-    color: rgba(255, 255, 255, 0.671);
-}
-
-.logo {
-    height: 100%;
-    transition: 0.4s;
-}
-
-.logo:hover {
-    cursor: pointer;
-    transform: scale(0.9);
-}
-
-
-
-
-
-/* BURGER */
-.burger {
-    --burger-width: 50px;
-    width: var(--burger-width);
-    height: 50%;
-    margin-right: 15px;
-    transition: 0.4s ease-in-out;
-}
-
-body {
-    position: relative;
-}
-
-.flip {
-    transform: rotate(90DEG);
-}
-
-.burger:hover {
-    cursor: pointer;
-    border-radius: 10%;
-    background-color: #aa71a7;
-}
-
-nav {
-    z-index: 15;
-    position: fixed;
-    top: 90px;
-    right: 10px;
-    background-color: rgba(60, 15, 58, 1);
-    border: solid 3px #aa71a7;
-    text-align: center;
-
-    transition: transform 0.4s ease-in-out;
-}
-
-nav li {
-    padding: 40px 80px;
-}
-
-nav li:hover {
-    background-color: #aa71a7;
-    cursor: pointer;
-}
-
-nav li:active {
-    background-color: #FF8BF9;
-}
-
-.hiddenClass {
-    transform: translate(150%);
-}
 
 
 
