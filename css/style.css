@@ -212,7 +212,7 @@ nav li{
 
 
 .main-home{
-    top: 40px;
+    top: 150px;
     /* medida responsive y repeta margenes iguales */
     width:90%;
     position: relative;
@@ -258,19 +258,19 @@ nav li{
         background-position: bottom center;
     }
      50%{
-        background-image:  url("img/desc-bg1.jpg");
+        background-image:  url("img/desc2.jpg");
         background-position: bottom center;  
     }
     74%{
-        background-image:  url("img/desc-bg1.jpg");
+        background-image:  url("img/desc2.jpg");
         background-position: top center;
     }
      75%{
-        background-image:  url("img/bully-preview1.jpg");
+        background-image:  url("img/wallpaper.bully.1600x1200.2016-11-16.201.jpg");
         background-position: top center;  
     }
     99%{
-        background-image:  url("img/bully-preview1.jpg");
+        background-image:  url("img/wallpaper.bully.1600x1200.2016-11-16.201.jpg");
         background-position: bottom center;
     }
 
@@ -781,10 +781,10 @@ footer li:hover{
 /* ANIMACION CARDS */
 
 .ocultar-cards.left{
-    transform:translateX(-1000px) scale(0.1);
+    transform:translateX(-1200px) scale(0.1);
 }
 .ocultar-cards.right{
-    transform:translateX(1000px) scale(0.1);
+    transform:translateX(1200px) scale(0.1);
 
 }
 
@@ -825,17 +825,18 @@ footer li:hover{
     width:90%;
     height:80vh;
     overflow: hidden;
-    background-color: #7EAEE055;
+    /* background-color: #7EAEE055; */
     margin:100px auto;
     text-align: center;
     display:flex;
     align-items: center;
     position:relative;
+    text-align: center;
 }
 .hero-personajes h1{
     position:absolute;
     top:0px;
-    left:50px;
+    left:calc(50% - 147px);
 }
 
 .hero-personajes .lft, .hero-personajes .rgt{
@@ -867,10 +868,11 @@ z-index:1;
     gap:150px;
 
     overflow: hidden;
-
     position:absolute;
     margin-left: calc(50% - 300px);
-    transition:0.4s;
+    transition:1s;
+    top:600px;
+    /* transform: translateY(500px); */
 }
 .personaje-card{
     height:50vh;
